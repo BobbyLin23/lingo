@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="text-sky-300">
+  <div class="text-sky-300 font-[Nunito]">
     Hello World
   </div>
 </template>

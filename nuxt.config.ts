@@ -3,10 +3,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
-    'shadcn-nuxt'
+    'shadcn-nuxt',
+    '@nuxtjs/google-fonts'
   ],
   shadcn: {
     prefix: '',
     componentDir: './components/ui'
+  },
+  googleFonts: {
+    families: {
+      Nunito: true
+    }
   }
 })

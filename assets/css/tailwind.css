@@ -76,3 +76,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-display: swap;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Regular'), local('Nunito-Regular'),
+    url('~assets/fonts/Nunito-400-cyrillic-ext1.woff2') format('woff2');
+}
+
+html, body, #__nuxt {
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+}
