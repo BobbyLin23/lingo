@@ -20,10 +20,12 @@
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.21",
+    "vue-clerk": "^0.2.0",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.3",
+    "@nuxt/image": "^1.4.0",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "eslint": "^8.57.0",

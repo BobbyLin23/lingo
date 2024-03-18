@@ -4,9 +4,10 @@
 
 <template>
   <div class="min-h-screen flex flex-col">
+    <MHeader />
     <main class="flex-1 flex flex-col items-center justify-center">
-      <MHeader />
       <slot />
     </main>
+    <MFooter />
   </div>
 </template>

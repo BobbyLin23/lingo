@@ -4,12 +4,21 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    "@nuxt/image"
   ],
+  build: {
+    transpile: ['vue-clerk']
+  },
   components: [
     '~/components',
     { path: '~/components/marketing', prefix: 'M' }
   ],
+  runtimeConfig: {
+    public: {
+      clerkPublishableKey: process.env.CLERK_PUBLISHABLE_KEY
+    }
+  },
   shadcn: {
     prefix: '',
     componentDir: './components/ui'
@@ -18,5 +27,5 @@ export default defineNuxtConfig({
     families: {
       Nunito: true
     }
-  }
+  },
 })
