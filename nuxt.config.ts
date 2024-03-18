@@ -6,6 +6,10 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@nuxtjs/google-fonts'
   ],
+  components: [
+    '~/components',
+    { path: '~/components/marketing', prefix: 'M' }
+  ],
   shadcn: {
     prefix: '',
     componentDir: './components/ui'
