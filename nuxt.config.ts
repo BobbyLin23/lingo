@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/image"
   ],
   build: {
-    transpile: ['vue-clerk']
+    transpile: ['vue-clerk', '@clerk/clerk-js']
   },
   components: [
     '~/components',
@@ -17,7 +17,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       clerkPublishableKey: process.env.CLERK_PUBLISHABLE_KEY
-    }
+    },
+    clerkSecretKey: process.env.CLERK_SECRET_KEY,
   },
   shadcn: {
     prefix: '',

@@ -1,6 +1,6 @@
 import { useClerk } from "vue-clerk"
 
-export default defineNuxtRouteMiddleware((to, from) => {
+export default defineNuxtRouteMiddleware(() => {
   const nuxtApp = useNuxtApp()
   const clerk = useClerk()
 
@@ -8,8 +8,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
     process.server
     && !nuxtApp.ssrContext?.event.context.auth?.userId
   )
-    return navigateTo('/')
-
+    return navigateTo('/404')
+    
   if (process.client && clerk.loaded && !clerk.user?.id)
-    return navigateTo('/')
+    return navigateTo('/404')
 })

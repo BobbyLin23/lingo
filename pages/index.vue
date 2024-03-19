@@ -1,10 +1,16 @@
 <script lang="ts" setup>
 import { Loader } from 'lucide-vue-next'
-import { ClerkLoaded, ClerkLoading, SignInButton, SignUpButton, SignedIn, SignedOut } from 'vue-clerk'
+import {
+  ClerkLoaded,
+  ClerkLoading,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+} from 'vue-clerk'
 
 definePageMeta({
   layout: 'marketing',
-  middleware: ['public'],
 })
 </script>
 
@@ -23,13 +29,13 @@ definePageMeta({
         </ClerkLoading>
         <ClerkLoaded>
           <SignedOut>
-            <SignUpButton mode="modal" after-sign-in-url="/learn" after-sign-up-url="/learn">
-              <Button size="lg" variant="secondary" class="w-full">
+            <SignUpButton v-slot="{ handler }" mode="modal" after-sign-in-url="/learn" after-sign-up-url="/learn">
+              <Button size="lg" variant="secondary" class="w-full" @click="handler">
                 Get Started
               </Button>
             </SignUpButton>
-            <SignInButton mode="modal" after-sign-in-url="/learn" after-sign-up-url="/learn">
-              <Button size="lg" variant="primaryOutline" class="w-full">
+            <SignInButton v-slot="{ handler }" mode="modal" after-sign-in-url="/learn" after-sign-up-url="/learn">
+              <Button size="lg" variant="primaryOutline" class="w-full" @click="handler">
                 I already have an account
               </Button>
             </SignInButton>

@@ -1,5 +1,12 @@
 <script lang="ts" setup>
-import { ClerkLoaded, ClerkLoading, SignInButton, SignedIn, SignedOut, UserButton } from 'vue-clerk'
+import {
+  ClerkLoaded,
+  ClerkLoading,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from 'vue-clerk'
 import { Loader } from 'lucide-vue-next'
 </script>
 
@@ -20,8 +27,8 @@ import { Loader } from 'lucide-vue-next'
           <UserButton after-sign-out-url="/" />
         </SignedIn>
         <SignedOut>
-          <SignInButton mode="modal" after-sign-in-url="/learn" after-sign-up-url="/learn">
-            <Button size="lg" variant="ghost">
+          <SignInButton v-slot="{ handler }" mode="modal" after-sign-in-url="/learn" after-sign-up-url="/learn">
+            <Button size="lg" variant="ghost" @click="handler">
               Login
             </Button>
           </SignInButton>
