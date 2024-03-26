@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  devServer: {
+    port: 4021,
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
@@ -14,6 +17,7 @@ export default defineNuxtConfig({
     '~/components',
     { path: '~/components/marketing', prefix: 'M' },
     { path: '~/components/learn', prefix: 'L' },
+    { path: '~/components/courses', prefix: 'C' },
   ],
   runtimeConfig: {
     public: {

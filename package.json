@@ -11,13 +11,15 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "db:studio": "npx drizzle-kit studio",
-    "db:push": "npx drizzle-kit push:pg"
+    "db:push": "npx drizzle-kit push:pg",
+    "db:seed": "tsc ./scripts/seed.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "drizzle-orm": "^0.30.4",
+    "h3-clerk": "^0.3.9",
     "lucide-vue-next": "^0.358.0",
     "nuxt": "^3.11.0",
     "radix-vue": "^1.5.2",
@@ -25,7 +27,8 @@
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.21",
     "vue-clerk": "^0.2.0",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue-sonner": "^1.1.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.3",

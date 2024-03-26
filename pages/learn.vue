@@ -3,6 +3,13 @@ definePageMeta({
   middleware: ['auth'],
   layout: 'main',
 })
+
+const userProgressData = getUserProgress()
+
+const [userProgress] = await Promise.all([userProgressData])
+
+if (!userProgress.value || !userProgress.value?.activeCourse)
+  navigateTo('/courses')
 </script>
 
 <template>
@@ -13,7 +20,8 @@ definePageMeta({
           title: 'Spanish',
           imageSrc: '/es.svg',
         }"
-        :hearts="5" :points="100"
+        :hearts="5"
+        :points="100"
         :has-active-subscription="false"
       />
     </StickyWrapper>
