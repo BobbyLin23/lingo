@@ -5,6 +5,3 @@
 <Button>
   Click me
 </Button>
-<div>
-  Hello World
-</div>
