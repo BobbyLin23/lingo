@@ -1,12 +1,16 @@
 <script lang='ts'>
+  import type { Snippet } from 'svelte'
   import favicon from '$lib/assets/favicon.svg'
+  import { ClerkProvider } from 'svelte-clerk'
   import '../app.css'
 
-  let { children } = $props()
+  const { children }: { children: Snippet } = $props()
 </script>
 
 <svelte:head>
   <link rel='icon' href={favicon} />
 </svelte:head>
 
-{@render children?.()}
+<ClerkProvider afterSignOutUrl='/' afterSignInUrl='/learn' afterSignUpUrl='/learn'>
+  {@render children?.()}
+</ClerkProvider>

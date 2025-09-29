@@ -11,6 +11,9 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
+  "dependencies": {
+    "svelte-clerk": "^0.17.3"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^5.4.1",
     "@lucide/svelte": "^0.544.0",
