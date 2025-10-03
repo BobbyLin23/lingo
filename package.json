@@ -9,9 +9,14 @@
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.44.6",
     "svelte-clerk": "^0.17.3"
   },
   "devDependencies": {
@@ -24,6 +29,7 @@
     "@tailwindcss/vite": "^4.0.0",
     "bits-ui": "^2.11.4",
     "clsx": "^2.1.1",
+    "drizzle-kit": "^0.31.5",
     "eslint": "^9.36.0",
     "eslint-plugin-svelte": "^3.12.3",
     "svelte": "^5.0.0",
