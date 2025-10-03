@@ -2,7 +2,7 @@
   import Hero from '$lib/assets/hero.svg'
   import Button from '$lib/components/ui/button/button.svelte'
   import { LoaderIcon } from '@lucide/svelte'
-  import { ClerkLoaded, ClerkLoading, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from 'svelte-clerk'
+  import { ClerkLoaded, ClerkLoading, SignedIn, SignedOut, SignInButton, SignUpButton } from 'svelte-clerk'
 </script>
 
 <div class='max-w-[988px] mx-auto flex-1 flex flex-col lg:flex-row p-4 gap-2 items-center justify-center'>
@@ -19,7 +19,11 @@
       </ClerkLoading>
       <ClerkLoaded>
         <SignedIn>
-          <UserButton />
+          <Button variant='primary'>
+            <a href='/learn'>
+              Get Started
+            </a>
+          </Button>
         </SignedIn>
         <SignedOut>
           <SignUpButton mode='modal'>
