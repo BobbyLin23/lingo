@@ -13,7 +13,7 @@
 </script>
 
 <a href={href} class='w-full'>
-  <Button variant={active ? 'secondaryOutline' : 'sidebar'} class='justify-start h-[52px] w-full cursor-pointer'>
+  <Button variant={active ? 'sidebarOutline' : 'sidebar'} class='justify-start h-[52px] w-full cursor-pointer'>
     <img src={iconSrc} alt={label} class='mr-5' height='32' width='32'>
     {label}
   </Button>
